@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>List of all Exchanges in ActivOne API</h1>
+
+<p id="demo"></p>
+<script src="https://weboneapi.activfinancial.com/one-api/index.js"></script>
+<script>
+ 
+const cars = Object.entries(activOneApi.Exchange).map(([k,v])=>{return k+' = '+v;});
+
+document.getElementById("demo").innerHTML = cars.join('<br>');
+document.getElementById("demo").innerHTML = JSON.stringify(activOneApi.Exchange,null,4).replaceAll('\n','<br><br>')
+</script>
+
+</body>
+</html>
