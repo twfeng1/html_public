@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+  <style>
+.table-dark {
+
+  --bs-table-hover-bg: hsl(30, 100%, 28%);
+  --bs-table-hover-color: white;
+}
+
+}
+</style>
+  
 <head>
 <title>Activ API static reference data </title>
 <script src="https://weboneapi.activfinancial.com/one-api/index.js"></script>
@@ -65,7 +75,7 @@ var tableElement = generateTable(fields);
     tableElement.id="tb1";
 document.body.appendChild(tableElement);
 
-['table-striped','table-bordered','table'].forEach(classname=>{
+['table-striped','table-dark','table-bordered','table'].forEach(classname=>{
 document.getElementById('tb1').classList.add(classname);
 
 })
